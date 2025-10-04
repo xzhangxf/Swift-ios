@@ -1,0 +1,257 @@
+Swift Language 1
+September 30, 2025 12:24 PM
+
+In this chapter, we’
+ll learn Swift, the programming language.
+https://learnxinyminutes.com/swift/
+
+# Intro
+
+## What is Swift?
+
+Swift is a programming language developed by Apple, for use in developing apps for Apple platforms. 
+
+- Released in 2014
+- Open sourced in 2015
+- Designed to be safe, fast, expressive.
+
+## Swift vs. SwiftUI
+
+- **Swift** is an open-source programming language created by Apple for building apps.
+    - Before Swift, Apple developers mostly used another language, Objective-C.
+- **SwiftUI** is a user interface toolkit using the Swift language that allows programmers to compose apps on Apple platforms.
+    - There are other toolkits still in use, such as AppKit for macOS and UIKit for iOS/iPadOS.
+
+## Getting Started
+
+Create a new Xcode project. No need to remove the storyboard for this — just head straight to `ViewController`. At the top of the file, add:
+
+import Playgrounds
+
+#Playground("Part 1") {
+		print("Hello")
+}
+
+This is a new feature in Xcode 26 — the `#Playground` macro, which lets you run arbitrary code anywhere. To view the output, open the Preview in the top right. 
+
+Alternatives to `#Playground`:
+
+- Xcode Playgrounds, which you can get to by choosing `File` → `New` → `Playground...`
+    - This is a stripped-down version of the Xcode interface, that lets you run code (but not build apps).
+- You can also download [Swift Playground for Mac](https://www.notion.so/Swift-Language-1-27e1ef746aec8006be62e090d6cb1a2f?pvs=21)! “Learn real coding the fun way”.
+    - This has fun animated puzzles and tutorials to learn Swift and SwiftUI!
+## Exercises
+
+There will be exercises throughout this section. Try them out and submit them!
+
+---
+
+# Variables, Constants, and Types
+
+Type in this code. It's OK to get the error!
+
+var numberOfCookies = 10
+var myName = "Cookie Monster"
+var amIHungry = true
+
+// OM NOM NOM NOM
+numberOfCookies = 0
+
+// ME NO LIKE DONUT
+let numberOfDonuts = 10
+
+// BUT ME DESPERATE
+numberOfDonuts = 5
+- In this code, we create some variables and constants, and then we try to change them. In fact, we create three different types of variables/constants.
+- `numberOfCookies` is an `Int`, `myName` is a `String`, and `amIHungry` is a `Bool`. More on these later.
+- We got some errors — that's fine! Click on the red dots to see more details about the errors.
+- There are also some lines, starting with `//`, that don't look like code. Those are **comments**, and are ignored by Swift.
+
+## Naming Variables and Constants
+
+You can store information in variables or constants. Their names:
+
+- Have to start with letters, or an underscore `_`
+- Can be emoji, e.g. `var 🍕`, but please don't use emoji variable names unless you want to annoy someone with your code
+- Cannot have spaces in them
+- Cannot start with numbers
+- Are case-sensitive!
+
+We generally name them in **camelCase** — lowercase to start, no space in between words, uppercase for new words.
+
+## Declaring Variables
+
+**Variables:**
+
+- The first time you use one, you have to declare it using the `var` keyword before the name of the variable, e.g. `var numberOfCookies = 10`
+- When you want to set it again, you just use the name — no need for `var` this time, e.g. `numberOfCookies = 0`
+
+**Constants:**
+
+- You also have to declare a constant using the `let` keyword, e.g. `let numberOfDonuts = 10`
+- You can't change it any more afterwards!
+- Think: Why would anyone bother with something so seemingly useless?
+
+## Reserved Keywords
+
+- There are certain things you can't name your variables and constants — these are **reserved keywords** in Swift.
+- A reserved keyword is a word that is used in the programming language itself, including keywords used in declarations, statements, expressions and types, patterns and more.
+- e.g. `var class = "Secondary 2A"` will return an error, as `class` is a reserved keyword.
+- Similarly, you can't name a variable `var`.
+
+**List of Reserved Keywords:** http://tk.sg/swiftreservedkeywords
+
+## Comments
+
+- The grey/faded `//` lines are **comments**
+- We saw these in Unit 1 — they're ignored by Swift.
+- You can also comment with `/* …anything in between here, even new lines... */`
+- Comments are great for writing "notes to yourself", or others
+    - Someday, you'll code till 3am, wake up at 8am, look at your code, and wonder, *"What in the world was I thinking??"* — comments would be useful here.
+    - Or you might be working in a team, and someone has to take over your code. They'd really appreciate if you could explain what you were trying to do with some complex lines of code!
+
+## Common Variable Types
+
+- **Integer (**`Int`**)** — whole numbers
+- **Double-precision floating point numbers (**`Double`**)** — numbers with decimal values (don't use the Float type)
+- `String` — text, surrounded by "double quotes"
+- **Booleans (**`Bool`**)** — true or false
+- … and a few more we might see later.
+
+## Type Inference
+
+- In our example code, we didn't specify a type for any of our variables and constants — Swift cleverly **inferred** the types from what was written.
+- `var numberOfCookies = 10` — that's an `Int`, because it has no decimal point.
+- `var myName = "Cookie Monster"` — that's a `String`, because of the double-quotes.
+- `var amIHungry = true` — that's a `Bool`, because it's `true` or `false` (different from `"true"` or `"false"`, which are Strings!)
+
+## Type Inference (continued)
+
+- What if you wanted to specify a type, though?
+- For instance, you want to start `numberOfCookies` at 10, but let it become 0.5 in the future, because you're the kind of person who leaves half a cookie in the jar.
+    - (That's terrible.)
+- You would have to use **type annotation** to explicitly tell Swift what type the variable you're declaring has.
+
+## Type Annotation
+
+You can annotate each variable declaration with a type, by using a colon, followed by the type name.
+var thisIsAnIntBecauseWeSaidSo: Int = 10
+var thisIsAnIntBecauseSwiftGuessed = 20
+var canYouGuessThisType = 20.5
+var wellThisOneIsAnnotated: Double = 100.0
+var whatAboutThis = "true"
+
+## Swift and Type Safety, Part 1
+
+- After you declare a variable or constant as a certain type, you cannot change its type ever again!
+- In our example code, we couldn't write `numCookies = "no more"`, because that right-side value is a String, and we set `numCookies` up as an Int.
+- In fact, Swift won't even let you write `numCookies = 0.5` — because 0.5 is a Double type, not an Int!
+- We'll work with different types in the next section.
+
+## Exercise 1
+
+Type out the code shown into your Playground page.
+
+- Don't just use image recognition to lift the text from this image! Type it out so you get used to typing Swift code.
+- It'll give you lots of errors!
+- Can you fix the code so that Playgrounds doesn't give you any errors? There are many ways to do this.
+
+![CleanShot 2025-09-30 at 20.50.53@2x.jpg](attachment:75af1182-dcf0-4496-a256-2d3957c45cb5:CleanShot_2025-09-30_at_20.50.532x.jpg)
+## Swift and Type Safety, Part 1
+
+- After you declare a variable or constant as a certain type, you cannot change its type ever again!
+- In our example code, we couldn't write `numCookies = "no more"`, because that right-side value is a String, and we set `numCookies` up as an Int.
+- In fact, Swift won't even let you write `numCookies = 0.5` — because 0.5 is a Double type, not an Int!
+- We'll work with different types in the next section.
+
+# Operators
+
+Type out this code. It's a free, gigantic calculator!
+
+You don't have to type the comments. Press run when done!
+
+let sum = 1 + 1
+let diff = 5 - 1
+let diff2 = 10 - sum // re-using a constant here!
+
+// * is multiply, / is divide
+let a = 10
+let b = 20
+let product = a * b
+let div = b / a
+let div2 = a / b // wait... my elementary school math teacher might disagree with this result
+
+// % is remainder, or modulo
+let rem = 21 % 5 // remainder of 21 when divided by 5
+
+// order of operations is BODMAS, like in real math
+var ordered = 5 + 2 * 3
+
+// and you can group with brackets
+let output = (5 + 2) * 3
+
+- n this code, we demonstrated some basic mathematical concepts: adding, subtracting, multiplying, dividing, and remainder.
+- You can work with numbers, variables, or constants — just remember that constants can't be changed.
+- On each line, the left side is the variable or constant, while the right side is an operation. When the operation is complete, the value is assigned into the left.
+
+## Integer Division
+
+- `a` (10) divided by `b` (20) is zero??!?
+- Did Apple, the world's biggest company (by market value, at time of writing), fail math when creating Swift?
+- Is that why they have so many zeroes behind their value?
+- Don't worry: Swift does **integer division**.
+- This means that if you divide an integer by another integer, the result is an integer.
+- What if you really want to divide an integer variable by a larger integer variable, to get a fraction (or Double)? You'd need to learn about types.
+
+## Swift and Type Safety, Part 2
+
+- Swift is very strict about not mixing types. You saw earlier that you couldn't assign an Int to a Double value.
+- This also means you can't add a Double value to an Int! So as odd as it seems, if `a` is an Int, you can't divide it by `2.0` — Swift will give you an error. Test this out:
+
+```swift
+let adiv = a / 2.0 ❌
+```
+
+- To achieve this, you can **cast** `a` to a Double. This does not change `a`, but it does allow the operation to proceed:
+
+```swift
+let adiv = Double(a) / 2.0 ✅
+```
+
+## Type Inference Without Variables
+
+- Swift is clever enough to infer the type of any number you type, if it's not part of a declared variable.
+- Try these out:
+
+```swift
+let test1 = 5 / 2
+let test2 = 5.0 / 2
+let test3 = 5 / 2.0
+```
+
+- There'll be no errors!
+- `test1` will be an Int, of value 2, because you divided two Ints.
+- `test2` and `test3` will be Doubles, of value 2.5, because Swift assumes each number without `.0` behind it is a Double as well.
+
+## Assignment, Not Equality
+
+Here are some lines of code to type out:
+
+```swift
+var cookies = 0
+cookies = cookies + 20
+cookies += 20
+
+```
+
+- The second line might be a bit confusing if you look at it as a mathematical equation — how can cookies be equal to cookies + 20? 0 ≠ 1! Everything is wrong! — but that's because `=` is an **assignment operator**. It's taking the right side value, and saving it into the left variable.
+- The third line is a shorthand for the second! It stands for "increment cookies by 20". You can use this with , , and `/` as well.
+
+## Exercise 2
+
+Changing variables, when there's someone going around eating Apple devices.
+
+Type this out, add in the two missing lines, and try changing your `numMacBooks` and `numIPads`.
+
+![CleanShot 2025-09-30 at 20.52.34@2x.jpg](attachment:6f65a73e-c43d-4fd7-8f33-7f0b89089f1b:CleanShot_2025-09-30_at_20.52.342x.jpg)
+
