@@ -1,0 +1,218 @@
+Intro to Mac
+September 30, 2025 · 12:30 PM
+
+Welcome — this guide will get you started with the basics of using a Mac. Please feel free to suggest edits or add tips.
+## Essentials
+
+If you’re switching from Windows, Linux, or Chromebook:
+- Most Control-based shortcuts map to the Command key (Cmd). The Command symbol is ⌘.
+- Copy: `⌘-C`
+- Paste: `⌘-V`
+- Cut: `⌘-X` (if a direct Cut isn't available in an app, you can Copy then use Move with `⌘-⌥-V`)
+
+## Spotlight
+
+Spotlight helps you quickly find files, open apps, and do quick calculations or conversions.
+- Press `⌘-Space` to open Spotlight.
+- Use `⌘-Shift-Space` for a focused file search (some apps or system versions may differ).
+
+## App switcher
+
+Use the app switcher to move between running applications:
+- Press and hold `⌘`, then press `Tab` to open the app switcher and cycle through apps.
+- Keep holding `⌘` and repeatedly press `Tab` (or use `⇧-Tab`) to move backward.
+
+## Files & Finder
+
+Finder is macOS's file manager.
+- Toggle views with `⌘-1`, `⌘-2`, `⌘-3`.
+- Drag frequently used folders or files to the Finder sidebar to add them to Favorites.
+- Handy Finder shortcuts:
+    - `⌘-Shift-A` — Applications
+    - `⌘-Shift-D` — Desktop
+    - `⌘-Shift-G` — Go to Folder (type a path)
+    - `⌘-Shift-H` — Home folder
+
+## Secondary / Right-click
+
+Ways to right-click on a Mac:
+- Use a multi-button mouse and right-click normally.
+- Hold `Ctrl` and click with one button.
+- Use a two-finger click on a trackpad (enable in System Settings > Trackpad).
+
+## Terminal
+
+The Terminal is the command-line interface on macOS (similar to Command Prompt on Windows).
+- Open it from Applications > Utilities > Terminal, or search for “Terminal” in Spotlight.
+
+It looks plain by default, but you can customize it. If you want better themes and plugins, consider installing Oh My Zsh.
+
+Replace the example image in this repo with your own screenshot at `images/terminal.png` (or update the path below):
+![Terminal screenshot](images/terminal.png)
+
+To install Oh My Zsh, run this in your Terminal (this is the official install command):
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Popular alternatives to the default Terminal:
+- iTerm2 — https://iterm2.com/
+- Warp — https://www.warp.dev/
+- Alacritty — https://github.com/alacritty/alacritty
+
+## Screenshots and screen recording
+
+macOS has built-in screenshot and recording tools:
+- `⌘-Shift-5` — open the screenshot / screen recording toolbar (pick still or video).
+- `⌘-Shift-4` — select an area or press Space to capture a window.
+- `⌘-Shift-3` — capture the entire screen.
+
+## Some recommended apps
+
+- Raycast — https://www.raycast.com/
+- KeyCastr — https://github.com/keycastr/keycastr
+- CleanShot — https://cleanshot.com/
+- Helium Browser — https://helium.computer/
+
+## Submit a screenshot or recording
+
+If you have a short screen recording or a screenshot showing a tip or app you like, add it to this repository (for example, under `media/` or `images/`) and mention it in this file. Suggested submissions:
+- A short recording demoing a Mac app you recommend.
+- A quick tip or workflow (e.g., Finder trick, Terminal alias).
+
+Contributions welcome — thanks for improving this guide!
+Intro to Mac
+September 30, 2025 12:30 PM
+
+Welcome! We’ll get you started with using a Mac first. If you have tips, please feel free to add them!
+
+# Essentials
+
+If you’re switching from Windows/Linux/Chromebook:
+
+- Most Control-based shortcuts are now Command-based. The symbol is `⌘` .
+- Copy: `Cmd-C`
+- Paste: `Cmd-V`
+- Cut: `Cmd-X` (or, if unavailable, Copy, then Move with `Cmd-Opt-V`)
+
+# Spotlight Search
+
+Spotlight will let you quickly search for files or open apps.Spotlight will let you quickly search for files or open apps.
+
+- `Cmd-Space` for Spotlight
+- `Cmd-Shift-Space` for file search
+
+# App Switcher
+
+Switch between apps.Switch between apps.
+
+- `Cmd⌘-Tab` to activate
+- Tap and hold `⌘,` tap `Tab` to go through
+
+# Files & Folders
+
+Finder is the “file finder” for your Mac.
+
+- Toggle different views with `Cmd-1` , `Cmd-2` , `Cmd-3`
+- Drag files and folders to the sidebar to keep them easily accessible in your `Favourites`
+- Some useful keyboard shortcuts:
+    - `Cmd-Shift-A` will bring you to your Applications folder
+    - `Cmd-Shift-D` - Desktop
+    - `Cmd-Shift-G` will let you type out which path you want to get to
+    - `Cmd-Shift-H` - Home folder
+
+Intro to Mac
+September 30, 2025 · 12:30 PM
+
+Welcome — this guide will get you started with the basics of using a Mac. Please feel free to suggest edits or add tips.
+
+## Essentials
+
+If you’re switching from Windows, Linux, or Chromebook:
+
+- Most Control-based shortcuts map to the Command key (Cmd). The Command symbol is ⌘.
+- Copy: `⌘-C`
+- Paste: `⌘-V`
+- Cut: `⌘-X` (if a direct Cut isn't available in an app, you can Copy then use Move with `⌘-⌥-V`)
+
+## Spotlight
+
+Spotlight helps you quickly find files, open apps, and do quick calculations or conversions.
+
+- Press `⌘-Space` to open Spotlight.
+- Use `⌘-Shift-Space` for a focused file search (some apps or system versions may differ).
+
+## App switcher
+
+Use the app switcher to move between running applications:
+
+- Press and hold `⌘`, then press `Tab` to open the app switcher and cycle through apps.
+- Keep holding `⌘` and repeatedly press `Tab` (or use `⇧-Tab`) to move backward.
+
+## Files & Finder
+
+Finder is macOS's file manager.
+
+- Toggle views with `⌘-1`, `⌘-2`, `⌘-3`.
+- Drag frequently used folders or files to the Finder sidebar to add them to Favorites.
+- Handy Finder shortcuts:
+    - `⌘-Shift-A` — Applications
+    - `⌘-Shift-D` — Desktop
+    - `⌘-Shift-G` — Go to Folder (type a path)
+    - `⌘-Shift-H` — Home folder
+
+## Secondary / Right-click
+
+Ways to right-click on a Mac:
+
+- Use a multi-button mouse and right-click normally.
+- Hold `Ctrl` and click with one button.
+- Use a two-finger click on a trackpad (enable in System Settings > Trackpad).
+
+## Terminal
+
+The Terminal is the command-line interface on macOS (similar to Command Prompt on Windows).
+
+- Open it from Applications > Utilities > Terminal, or search for “Terminal” in Spotlight.
+
+It looks plain by default, but you can customize it. If you want better themes and plugins, consider installing Oh My Zsh.
+
+Replace the example image in this repo with your own screenshot at `images/terminal.png` (or update the path below):
+
+![Terminal screenshot](images/terminal.png)
+
+To install Oh My Zsh, run this in your Terminal (this is the official install command):
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Popular alternatives to the default Terminal:
+
+- iTerm2 — https://iterm2.com/
+- Warp — https://www.warp.dev/
+- Alacritty — https://github.com/alacritty/alacritty
+
+## Screenshots and screen recording
+
+macOS has built-in screenshot and recording tools:
+
+- `⌘-Shift-5` — open the screenshot / screen recording toolbar (pick still or video).
+- `⌘-Shift-4` — select an area or press Space to capture a window.
+- `⌘-Shift-3` — capture the entire screen.
+
+## Some recommended apps
+
+- Raycast — https://www.raycast.com/
+- KeyCastr — https://github.com/keycastr/keycastr
+- CleanShot — https://cleanshot.com/
+- Helium Browser — https://helium.computer/
+
+## Submit a screenshot or recording
+
+If you have a short screen recording or a screenshot showing a tip or app you like, add it to this repository (for example, under `media/` or `images/`) and mention it in this file. Suggested submissions:
+
+- A short recording demoing a Mac app you recommend.
+- A quick tip or workflow (e.g., Finder trick, Terminal alias).
+
+Contributions welcome — thanks for improving this guide!
